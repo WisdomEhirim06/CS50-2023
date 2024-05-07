@@ -1,0 +1,12 @@
+The code generally prints a user's height and then displays as a hash brick according to the value of the height.
+To do this, first create a variable to make things a lot easier.
+Since it wil only be an integer use the int.
+Use cs50's get_int function to prompt an input.
+Now to keep prompting, use a do while loop. Giving it a condition that only accepts a value between 1 and 8
+Use the or || boolean values. When the input is below 1 or above 8. If it matches these condtions it will keep prompting if true and stop when false.
+Next print the same value as stored, using the prinf value and %i\n for integers.
+To display the hashes:
+Use the for loop, incrementing the value of the int, to print a new line, if it is less than the inputed height.
+then nest another for loop, with an integer, that is less than the previous one, and keep incrementing it.
+To print the dots, make a new variable that is the deduction of the inputed height, so that it keeps on reducing as the pyramin increases.
+If it works then remove the dots and test it.
