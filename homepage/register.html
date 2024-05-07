@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Sign Up</title>
+        <link rel="icon" href="images/purity1.jpg">
+        <style>
+            body {
+                background-color: #FFDAB9;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Create a form that accepts people's email-->
+        <div class="first">
+            <h1 id="reg">Sign Up</h1>
+            <p id="pure"><em>Do you want a pure life? Pure Life, Pure devices?</em></p>
+        </div>
+
+        <!--For inputing data-->
+       <p id="pure1"><i>When you register, you'll receive daily encouragement from our community</i></p>
+       <div class="register">
+        <label for="username">Name</label><br>
+        <input type="text" id="username"><br>
+        <label for="userage">Age</label><br>
+        <input type="number" id="userage"><br>
+        <label for="email">Google Account</label><br>
+        <input type="email" id="email" placeholder="e.g someone@gmail.com"><br>
+        <label for="citizen">Nationality</label><br>
+        <input type="text" id="citizen" placeholder="Nationality"><br>
+       </div>
+
+       <!--Checkbox div-->
+       <div class="chose">
+         <br><input type="checkbox" id="choose" name="choose">
+         <label for="choose">By registering you agree to Purity_Code's terms and conditions.
+            Purity_Code will have acces to all your activities online and can restrict them.</label><br>
+       </div>
+
+       <!--Last two buttons with seperate id-->
+       <br><button id="button" type="submit" onclick="alert('We received your submission, time to live pure')">Submit</button>
+       <br><button id="button2" onclick="document.location='/index.html'">Cancel</button>
+    </body>
+</html>
