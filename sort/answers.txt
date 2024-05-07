@@ -1,0 +1,6 @@
+sort1 uses: BUBBLE SORT
+How do you know?: The bubble sort swaps until it is well arranged. It would be faster when arranging a random text but slower when arranging the reversed text.
+sort2 uses: MERGE SORT
+How do you know?: The merge sort spends less time in rearrranging the text files
+sort3 uses: SELECTION SORT
+How do you know?: You can notice the time spent when you compare it with sort1 when arranging the reversed texts.

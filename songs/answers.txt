@@ -1,0 +1,2 @@
+The user's audio aura will be that of the BLUES
+A better way to calculate the user's audio aura would be by finding the average energy and the frequency of most played songs
