@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Join
+{% endblock %}
+
+{% block main %}
+    <div class="reglog">
+        <h2>Connect now with Friends</h2>
+        <form action="/join" method="POST">
+            <span style="font-size:30px;"><i class="fa-solid fa-dove"></i> PurePost</span>
+            <div class="reg">
+                <input class="inputs" style="margin-top:15px;" autocomplete="off"autofocus type="text" id="name" value="{{name}}" placeholder="What would you like to be called?" name="name">
+                <input class="inputs" autocomplete="off" autofocus type="text" id="roomcode" value="{{roomcode}}" placeholder="Input Unique Room Code" name="roomcode">
+            </div>
+            <button type="submit" id="join" name="join" class="joinbut">Join room</button>
+            <button type="submit" name="create" id="create" class="joinbut"> Create room</button>
+        </form>
+    </div>
+    {% if error %}
+    <ul>
+      <li>{{error}}</li>
+    </ul>
+    {% endif %}
+{% endblock %}

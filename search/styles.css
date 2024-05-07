@@ -1,0 +1,111 @@
+ .link {
+    margin: 6px 15px 6px;
+    color: black;
+    padding: 1px;
+    font-size: 15px;
+    font-weight: 150;
+    float: right;
+  }
+
+  .upper {
+    width: 100%;
+    padding: 6px;
+    float: right;
+  }
+
+  .below {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .image{
+  }
+
+  #inputs {
+    width: 600px;
+    color: black;
+    padding: 12px 12px;
+    height: 17px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    font-weight: 10px;
+    border: 1px solid #f2f2f2;
+    border-radius: 15px;
+    }
+
+  .belowin {
+    height: 36;
+    width: 127.41;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    padding: 4px 16px;
+    margin: 11px 4px;
+    }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+  .appbar {
+    color: #d93025;
+    font-size: 20px;
+    margin: 25px 35px;
+    }
+
+  .separator-line {
+    border-bottom: solid 1px #d6d6d6;
+    }
+
+  .advanced-search-container {
+    margin: 50px 40px;
+  }
+  .advanced-search-container label {
+    display: inline-block;
+    width: 16%;
+    font-size: 20px;
+  }
+  .advanced-search-container .whitespace {
+    display: inline-block;
+    width: 50%;
+  }
+  .advanced-search-container .form-group {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+  .advanced-search-container .form-group label {
+    width: 16%;
+    font-size: 14px;
+  }
+  .advanced-search-container .form-group input[type=text] {
+    width: 49%;
+    padding: 2px 0;
+  }
+  .advanced-search-container .form-group .clarification {
+    font-size: 11px;
+    width: 30%;
+    margin-left: 1%;
+  }
+  .advanced-search-container .form-group .clarification .monospace {
+    font-family: monospace;
+  }
+  .advanced-search-container .form-group .right-align {
+    width: 50%;
+  }
+  .button {
+    float: right;
+    padding: 2px 12px;
+    margin: 10px 0px;
+    color: white;
+    background-color: dodgerblue;
+    border: 1px solid #156bbd;
+  }

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Password
+{% endblock %}
+
+{% block main %}
+    <div class="reglog">
+        <h1> Change Password</h1>
+        <form action="/reset" method="POST">
+            <div class="reg">
+                <input class="inputs" autocomplete="off" autofocus type="text" id="currentpassword" placeholder="Current Password" name="currentpassword">
+            </div>
+            <div class="reg">
+                <input class="inputs" autocomplete="off" autofocus type="text" id="newpassword" placeholder="New Password" name="newpassword">
+            </div>
+            <div class="reg">
+                <input class="inputs" autocomplete="off" autofocus type="text" id="confirmation" placeholder="Confirm" name="confirmation">
+            </div>
+            <button type="submit" id="buttonreg">Reset</button>
+            <style>
+                #buttonreg {
+                    color: #ffffcc;
+                    background-color: #6200EE;
+                    width: 576px;
+                    height: 44px;
+                    padding: 12px 12px;
+                    margin-bottom: 20px;
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 300;
+                }
+            </style>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Invite
+{% endblock %}
+
+{% block main %}
+    <div class="reglog">
+        <h2>Want to talk with a friend?</h2>
+        <form action="/invite" method="POST">
+            <span style="font-size:30px;"><i class="fa-solid fa-dove"></i> PurePost</span>
+            <div class="reg">
+                <input class="inputs" style="margin-top:15px;" autocomplete="off" autofocus type="email" id="receiver" placeholder="Friend's Email" name="receiver">
+            </div>
+            <button type="submit" class="buttonreg">Generate Code</button>
+        </form>
+    </div>
+{% endblock %}

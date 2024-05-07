@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+    <div class="reglog">
+        <h1> Sign In</h1>
+        <form action="/login" method="POST">
+            <div class="reg">
+                <input class="inputs" autocomplete="off" autofocus type="text" id="username" placeholder="Name" name="username">
+            </div>
+            <div class="reg">
+                <input class="inputs" autocomplete="off" autofocus type="text" id="password" placeholder="Password" name="password">
+            </div>
+            <button type="submit" class="buttonreg">Login</button>
+        </form>
+    </div>
+{% endblock %}

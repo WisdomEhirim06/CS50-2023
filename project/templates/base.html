@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/855c35aed5.js" crossorigin="anonymous"></script>
+        <link href="/static/puremail.ico" rel="icon">
+
+        <link href="/static/styles.css" rel="stylesheet">
+        <script src="/static/puremail.js"></script>
+        <style>
+            body {
+                background-color: #ffffcc;
+            }
+        </style>
+
+        <title>Pure Mail: {% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div>
+            {% if session["user_id"] %}
+                <div class="welcomeside">
+                    <div class="sidenav" id="mySidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a role="link" aria-disabled="true">Chatroom</a>
+                        <a href="/invite">Invite a Friend</a>
+                        <a href="/join">Join Chatroom</a>
+                        <a href="/reset">Change Password</a>
+                        <a href="/logout">Logout</a>
+                    </div>
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa-solid fa-dove"></i> PurePost</span>
+                </div>
+            {% else %}
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/register">Register</a>
+                    <a class="nav-link" href="/login">Log In</a>
+                </div>
+            {% endif %}
+            <main class="content">
+                {% block main %}{% endblock %}
+            </main>
+            <footer class="endfooter">
+                 Created by <a href="https://www.linkedin.com/in/wisdom-ehirim-1bba94243">PurityCode</a>
+            </footer>
+    </body>
+</html>

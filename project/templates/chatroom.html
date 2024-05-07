@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title%}
+    Chatroom
+{% endblock %}
+
+{% block main %}
+    <button id="leave-btn">Leave</button>
+    <h3>Chat code: {{roomcode}}</h3>
+    <div class="message-box">
+        <div class="messages" id="messages"></div>
+        <div style="display:flex;">
+            <input type="text" id="message" class="inputs" placeholder="Type your message...">
+            <button onclick="sendMessage()" style="height:40px;" id="sendbut"><i class="fa-solid fa-dove" style="font-size:32px;"></i> </button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+    integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var socketio = io.connect();
+
+        const messages = document.getElementById("messages");
+
+        const createMessage = (name, msg) => {
+            const content = `
+            <div class="text">
+                <span>
+                    <strong>${name}</strong>: ${msg}
+                </span>
+            </div>
+            `;
+            messages.innerHTML += content;
+        };
+
+        socketio.on("message", (data) => {
+            createMessage(data.name, data.message);
+        });
+
+        const sendMessage = () => {
+            const message = document.getElementById("message");
+            if (message.value == "") return;
+            socketio.emit("message", { data: message.value });
+            message.value = "";
+        };
+    </script>
+{% for msg in messages %}
+    <script type="text/javascript">
+        createMessage("{{msg.name}}", "{{msg.message}}");
+    </script>
+{% endfor %}
+{% endblock %}
